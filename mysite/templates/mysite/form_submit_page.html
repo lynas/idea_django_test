@@ -1,0 +1,13 @@
+{% extends "mysite/base.html" %}
+{% block content %}
+    <ul>
+        {% for line in lines %}
+            <li>{{ line }}</li>
+        {% endfor %}
+    </ul>
+    {% for line in first_name %}
+        {{ line }}
+    {% endfor %}
+
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends "mysite/base.html" %}
+{% block content %}
+    {% for line in lines %}
+        <ul>
+            {{ hello.text }}
+            <li>{{ line.text }}</li>
+        </ul>
+    {% endfor %}
+    <form action="/fsub/" method="POST">
+        {% csrf_token %}
+        <table>
+            <tr>
+                <td>First Name</td><td><input type="text" name="first_name" /> </td>
+                <td>Last Name</td><td><input type="text" name="last_name" /> </td>
+                <td>Age</td><td><input type="text" name="age" /> </td>
+                <td> </td><td><input type="submit" value="Submit" /> </td>
+            </tr>
+        </table>
+
+    </form>
+{% endblock %}
+
