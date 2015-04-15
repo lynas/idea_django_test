@@ -1,7 +1,10 @@
 from django.shortcuts import render
 import subprocess
-from mysite.models import Line
+from mysite.models import Person
 # from mysite.models import UsersOfIpv
+
+
+
 
 
 def home(request):
@@ -17,17 +20,19 @@ def home(request):
 
 
 def form_submit_page(request):
-    first_name = request.POST["first_name"]
-    last_name = request.POST["last_name"]
+    first_name = request.POST['first_name']
     age = request.POST["age"]
-    # context = {"first_name": "first_name"}
+    sex = request.POST["sex"]
+    account_type = request.POST["act"]
+    tags = request.POST["tag"]
+
+    person = Person(first_name, 11, sex, account_type, tags)
 
     proc = subprocess.Popen(['ls', '-al'], stdout=subprocess.PIPE)
     output = proc.stdout.read()
     lines = output.split("\n")
 
-    context = {'lines': lines, 'first_name': first_name}
+    context = {'lines': lines, 'person': person}
 
-    print(first_name, last_name, age)
     return render(request, "form_submit_page.html", context)
 

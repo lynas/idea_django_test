@@ -5,8 +5,7 @@ urlpatterns = [
     # Examples:
     # url(r'^$', 'djangoTest.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'mysite.views.home', name='home'),
-    url(r'^fsub/', 'mysite.views.form_submit_page', name='fsub'),
+    url(r'', include('mysite.urls')),
 ]
+
