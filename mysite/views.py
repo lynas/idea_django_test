@@ -13,7 +13,7 @@ def home(request):
     # {'lines': Line.objects.all()}
 
     # print Line.objects.all()
-    return render(request, "mysite/home.html", context)
+    return render(request, "home.html", context)
 
 
 def form_submit_page(request):
@@ -29,5 +29,5 @@ def form_submit_page(request):
     context = {'lines': lines, 'first_name': first_name}
 
     print(first_name, last_name, age)
-    return render(request, "mysite/form_submit_page.html", context)
+    return render(request, "form_submit_page.html", context)
 
