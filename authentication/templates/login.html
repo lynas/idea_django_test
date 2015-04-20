@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %}
+    <form action="/auth/authenticate/" method="post">
+        {% csrf_token %}
+        UserName: <input type="text" name="username" value="" id="username"/> <br>
+        Password: <input type="password" name="password" value="" id="password"/><br>
+        <input type="submit" value="Login"/>
+    </form>
+{% endblock %}

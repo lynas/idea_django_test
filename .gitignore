@@ -1,2 +1,3 @@
 .idea
 djangoTest.iml
+*.pyc
