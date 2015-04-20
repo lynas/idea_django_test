@@ -30,4 +30,5 @@ def invalid_login(request):
 
 
 def logout(request):
+    auth.logout(request)
     return render(request, 'logout.html', context={})

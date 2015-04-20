@@ -2,8 +2,10 @@ from django.shortcuts import render
 import subprocess
 from mysite.models import Person
 # from mysite.models import UsersOfIpv
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def home(request):
     # line = Line(text="testing line one")
     # line.save()
