@@ -4,9 +4,6 @@ from mysite.models import Person
 # from mysite.models import UsersOfIpv
 
 
-
-
-
 def home(request):
     # line = Line(text="testing line one")
     # line.save()

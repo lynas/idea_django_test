@@ -11,6 +11,7 @@ class Students(models.Model):
     address = models.CharField(max_length=100)
     description = models.TextField()
 
+
 class Person:
     name = models.CharField(max_length=100)
     age = models.CharField(max_length=100)
